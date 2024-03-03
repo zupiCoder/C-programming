@@ -18,10 +18,6 @@ int main() {
   while(input != 0) {
     scanf("%d",&input);
     
-    if(input == 0) {
-        break;
-    }
-    
     avg = (zgMeja + spMeja) / 2;
     
     if(input == 1) {
