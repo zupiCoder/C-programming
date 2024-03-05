@@ -10,12 +10,12 @@ int charToDigits(int input, int num) {
     return num;
 }
 
-// void printDigits(int num) {
-//     if (num >= 10) {
-//         printDigits(num / 10);
-//     }
-//     putchar((num % 10) + '0');
-// }
+void printDigits(int num) {
+    if (num >= 10) {
+        printDigits(num / 10);
+    }
+    putchar((num % 10) + '0');
+}
 
 int main() {
     int input;
@@ -30,9 +30,8 @@ int main() {
         negative = true;
     }
 
-    while(input != '\n') {
+    while(input != ' ') {
         a = charToDigits(input, a);
-        
         input = getchar();
     }
 
@@ -49,22 +48,17 @@ int main() {
 
     while(input != '\n') {
         b = charToDigits(input, b);
-        
         input = getchar();
     }
 
     if(negative) {
         b = -b;
-        negative = false;
     }
 
-    
     sum = a + b;
     
-    //digit to char of sum
-
-    printf("%d", sum);
-    //printDigits(sum);
+    printDigits("%d",sum);
+ 
     putchar('\n');  
     return 0;
 }

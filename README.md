@@ -26,7 +26,7 @@ If you're new here, start by setting up your C programming environment:
 Feel free to fork this repository, make changes, and submit pull requests if you have suggestions or improvements. If you're stuck or have questions, open an issue, and let's discuss!
 
 <div align="center">
-  <img src="images/pc.webp" width="500" height="300" alt="Project Screenshot">
+  <img src="images/avatar.webp" width="500" height="300" alt="Avatar">
 </div>
 
 
