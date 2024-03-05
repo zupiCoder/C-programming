@@ -18,22 +18,15 @@ If you're new here, start by setting up your C programming environment:
 
 1. Install a C compiler: [GCC](https://gcc.gnu.org/) (Linux), [Clang](https://clang.llvm.org/) (Mac), or [MinGW](http://mingw.org/) (Windows).
 2. Choose an IDE or editor: [Visual Studio Code](https://code.visualstudio.com/), [CLion](https://www.jetbrains.com/clion/), or just a simple text editor like [Notepad++](https://notepad-plus-plus.org/).
-3. Clone this repository: `git clone https://github.com/yourusername/your-repository-name.git`
+3. Clone this repository: `https://github.com/zupiCoder/C-programming.git`
 4. Start exploring and experimenting!
 
 ## Contributing 🤝
 
 Feel free to fork this repository, make changes, and submit pull requests if you have suggestions or improvements. If you're stuck or have questions, open an issue, and let's discuss!
 
-## Visual Guide 🌈
+![C Programming Essentials](images/pc.webp)
 
-Here's a minimalistic, programming-themed visual guide to get you inspired:
-
-![C Programming Essentials](pc.webp)  
-*Figure 1: The essence of C programming.*
-
-![Data Structures in C](link-to-another-image-here)  
-*Figure 2: Visualizing data structures.*
 
 ## Stay Connected 🌍
 
