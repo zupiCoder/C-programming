@@ -2,20 +2,15 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-int charToDigits(int input, int num);
-void printDigits(int num);
-
 int charToDigits(int input, int num) {
     num = num * 10 + (input - '0');
     return num;
 }
 
-// void printDigits(int num) {
-//     if (num >= 10) {
-//         printDigits(num / 10);
-//     }
-//     putchar((num % 10) + '0');
-// }
+int digitsToChars(int num) {
+         
+    
+}
 
 int main() {
     int input;
@@ -38,7 +33,6 @@ int main() {
 
     if(negative) {
         a = -a;
-        negative = false;
     }
     
     //2nd number
@@ -55,17 +49,16 @@ int main() {
 
     if(negative) {
         b = -b;
-        negative = false;
     }
 
     
     sum = a + b;
     
     //digit to char of sum
-
-    printf("%d", sum);
-    //printDigits(sum);
-    putchar('\n');  
+    while(sum > 0) {
+        
+    }
+        
     return 0;
 }
 

@@ -5,7 +5,7 @@
 int binaryToDecimal(int num);
 int charToDigits(int input, int num);
 int numOfDigits(int num);
-
+void printDigits(int log);
 //converting binary to dec
 int binaryToDecimal(int num) {
     int counter = 0;
@@ -26,13 +26,11 @@ int binaryToDecimal(int num) {
     }
     return decimal;
 } 
-
 //converting inputs to a binary number
 int charToDigits(int input, int num) {
     num = num * 10 + (input - '0');
     return num;
 }
-
 //number of digits
 int numOfDigits(int num) {
 
@@ -43,12 +41,21 @@ int numOfDigits(int num) {
     num = num / 10;
   }
   return numOf;
+}   
+//recursive function to print digits
+void printDigits(int log) {
+    if (log >= 10) {
+        printDigits(log / 10);
+    }
+    putchar((log % 10) + '0');
 }
   
 int main() {
     
     int input;
     int num = 0;
+    int log = 0;
+    int temp = 1;
         
     input = getchar();
     
@@ -60,24 +67,15 @@ int main() {
         
     int decimal = binaryToDecimal(num);
     
-    int temp = 1;
-    int log = 0;
-    
     //getting the log 
     while(temp <= decimal) {
       temp = temp * 2;
       log++;
     }
     
-    //printing log with putchar();
-    while(log > 0) {
-      int digit = 0;
-      for(int i = 0; i < numOfDigits(log) - 1; i++) {
-          int tempLog = log;
-          digit = tempLog / 10;
-      }
-    }
+    printDigits(log);
+    putchar('\n');
     return 0;
-    }
-    
-  
+}
+
+
