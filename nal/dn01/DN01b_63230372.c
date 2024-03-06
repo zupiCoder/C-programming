@@ -2,15 +2,19 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+//declared functions
 int binaryToDecimal(int num);
 int charToDigits(int input, int num);
 int numOfDigits(int num);
 void printDigits(int log);
+
+//defined functions
 //converting binary to dec
 int binaryToDecimal(int num) {
     int counter = 0;
     int decimal = 0;
     
+
     while(num > 0) {
         if(num % 10 == 1) {
             int count = counter;
@@ -60,7 +64,7 @@ int main() {
     input = getchar();
     
     while(input != '\n') {
-        
+        //call function to convert inputted chars into numbers
         num = charToDigits(input,num);  
         input = getchar();
     }
