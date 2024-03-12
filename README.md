@@ -2,7 +2,7 @@
 
 Welcome to my beginner C-Programming repository! This is where I'll be storing all of my school files, projects, and experiments as I dive deep into the world of C programming.
 
-## What's Inside? 📂
+## What's Inside? 📂    
 
 This repository is structured to help both me and you navigate through the various stages of learning C. Here's what you can expect to find:
 
@@ -20,7 +20,7 @@ If you're new here, start by setting up your C programming environment:
 2. Choose an IDE or editor: [Visual Studio Code](https://code.visualstudio.com/), [CLion](https://www.jetbrains.com/clion/), or just a simple text editor like [Notepad++](https://notepad-plus-plus.org/).
 3. Clone this repository: `https://github.com/zupiCoder/C-programming.git`
 4. Start exploring and experimenting!
-
+  
 ## Contributing 🤝
 
 Feel free to fork this repository, make changes, and submit pull requests if you have suggestions or improvements. If you're stuck or have questions, open an issue, and let's discuss!
@@ -32,7 +32,7 @@ Feel free to fork this repository, make changes, and submit pull requests if you
 
 ## Stay Connected 🌍
 
-Connect with me on [LinkedIn](your-linkedin-profile) or follow me on [GitHub](your-github-profile) to stay updated with my learning journey and projects.
+Follow me on [GitHub](https://github.com/zupiCoder)!
 
 Let's embark on this programming adventure together! Happy coding! 💻
 
