@@ -2,17 +2,11 @@
 #include <stdbool.h>
 #include <math.h>
 
-bool isPalindrome(long reverseNum, long num);
+bool isPalindrome(long num);
 long reverseNum(long num);
 
-bool isPalindrome(long reverseNum, long num) {
-  
-  if(reverseNum == num) {
-    return true;
-    
-  } else {
-    return false;
-  }
+bool isPalindrome(long num) {
+  return reverseNum(num) == num;
 }
 
 long reverseNum(long num) {
@@ -31,28 +25,25 @@ int main(){
    
   int k, a, b;
   int counter = 0;
-
   long temp = 0;
-  long reverseTemp = 0;
 
   scanf("%d%d%d",&k, &a, &b);
 
   for(int i = a; i <= b; i++) {
     temp = i;
     for(int j = 0; j < k; j++) {
-      //prva iteracija
+      
       if((temp + reverseNum(temp) > pow(10,17))){
         break;
       }
       temp += reverseNum(temp);
-      reverseTemp = reverseNum(temp);
 
-      if(isPalindrome(reverseTemp, temp)) {
+      if(isPalindrome(temp)) {
         break;
       }
     }
 
-    if(!isPalindrome(reverseTemp,temp)) {
+    if(!isPalindrome(temp)) {
       counter++;
     }
   }

@@ -2,18 +2,32 @@
 #include <stdbool.h>
 
 int biggestSum(int t[], int length) {
-  int temp = t[length - 1];
-  printf("%d\n", temp);
-  printf("\n");
+  int biggestSum = 0;
+  
+  //manjsamo od katerega elementa gremo skozi array
+  for(int el = 0; el < length; el++) {
+    //prvi element je el, gremo do konca arraya, ce 
+    //temp + element arraya > temp ga pristejemo
+    int temp = 0;
+    for(int i = el; i < length; i++){
+      if(temp + t[i] > biggestSum) {
+        printf("%d\n",t[i]);
+        temp += t[i];
+      } else {
+          break;
+      }
 
-  for(int i = 0 ; i < (length - 1); i++) {
-    if((temp + t[i]) > temp) {
-      temp += t[i];
-      printf("%d\n", temp);
+      if(temp > biggestSum) {
+        biggestSum = temp;
+      }
+
+      //elementa, ki zmanjsa temp ne moremo izpustiti, zaporedje 
+      //mora biti nepretrgano
+      
     }
   }
 
-  return temp;
+  return biggestSum;
 }
 
 int main() {
@@ -30,22 +44,9 @@ int main() {
     t[i] = input;
   }
 
-  //sort Array
-  for (int i = 0; i < n; i++) {   
-    for (int j = i+1; j < n; j++) {   
-      if(t[i] > t[j]) {  
-        temp = t[i];  
-        t[i] = t[j];  
-        t[j] = temp;  
-      }   
-    }   
-  }
-
   int sum = biggestSum(t, n);
 
   printf("%d\n", sum);
 
   return 0;
 }
-
-//nemoremo resiti z sortArray!!!!
