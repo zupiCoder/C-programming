@@ -10,7 +10,7 @@
 int stateOf(char input);
 int state_B(char input);
 int state_C(char input);
-//find state
+
 int stateOf(char input)
 {
 	if (input == '0')
@@ -27,7 +27,7 @@ int stateOf(char input)
 	}
 	return stateF;
 }
-//state decimal
+
 int state_B(char input)
 {
 	if ((input < '0') || (input > '9'))
@@ -36,7 +36,7 @@ int state_B(char input)
 	}
 	return stateB;
 }
-//state predznak + stevilo
+
 int state_C(char input)
 {
 	if (input == '0')
@@ -49,15 +49,15 @@ int state_C(char input)
 	}
 	return stateF;
 }
-//state predznak
+
 int state_A(char input)
 {
 	return stateF;
 } 
-//print state
+
 void printState(int state)
 {
-	if ((state == stateF))
+	if ((state == stateF) || (state == stateC))
 	{
 		putchar('0');
 	}
@@ -71,19 +71,13 @@ int main()
 {
 	char input = 0;
 	int state = defaultState;
-	int n;
 
-	scanf("%d", &n);
 	input = getchar();
 	
 	while (input != '\n')
 	{
 		if (input == ' ')
-		{
-			if(state == stateC) 
-			{
-				state = stateF;
-			}
+		{	
 			printState(state);
 			state = defaultState;
 			input = getchar();
