@@ -1,47 +1,33 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
+#include <limits.h>
 
-int biggestSum(int t[], int length) {
-  int biggestSum = 0;
-  
-  //manjsamo od katerega elementa gremo skozi array
-  for(int el = 0; el < length; el++) {
-    //prvi element je el, gremo do konca arraya, ce 
-    //temp + element arraya > temp ga pristejemo
-    int temp = 0;
-    for(int i = el; i < length; i++){
-      if(temp + t[i] > biggestSum) {
-        printf("%d\n",t[i]);
-        temp += t[i];
-      } else {
-          break;
-      }
+int t[1000000];
 
+int biggestSum(int t[], int n) {
+  int biggestSum = INT_MIN;
+  int temp = 0;
+
+  for(int i = 0; i < n; i++) {    
+    for(int j = i; j < n; j++) {
+      temp += t[j];
       if(temp > biggestSum) {
         biggestSum = temp;
       }
-
-      //elementa, ki zmanjsa temp ne moremo izpustiti, zaporedje 
-      //mora biti nepretrgano
-      
     }
-  }
-
+    temp = 0;
+  } 
   return biggestSum;
 }
 
 int main() {
 
-  int n;
-  int temp = 0;
+  int n = 0;
   scanf("%d", &n);
 
-  int t[n];
-
   for(int i = 0; i < n; i++) {
-    int input = 0;
-    scanf("%d", &input);
-    t[i] = input;
+    scanf("%d", &t[i]);
   }
 
   int sum = biggestSum(t, n);

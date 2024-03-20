@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+//definiramo tabelo zunaj;
+int t[100000];
+
 bool isPermutation(int t[], int n) {
   if(t[0] != 0) {
     return false;
@@ -15,13 +18,9 @@ bool isPermutation(int t[], int n) {
 }
 
 int main() {
-
-  int n;
   int temp = 0;
-
+  int n;
   scanf("%d", &n);
-
-  int t[n];
 
   //fill array
   for(int i = 0; i < n; i++) {
