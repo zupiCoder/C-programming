@@ -14,7 +14,20 @@ gcc -o test01 test01.c inverz.c -lm
 #include "inverz.h"
 
 long inverz(long x, long a, long b) {
-    // popravite / dopolnite ...
+    //bisekcija 
+    while(a <= b) {
+        long avg = (a + b) / 2;
+        if(f(avg) == x) {
+            return avg;
+        } else {
+            if(f(avg) > x) {
+                b = avg - 1;
+            }
+            if(f(avg) < x) {
+                a = avg + 1;
+            }
+        }
+    }
     return -1;
 }
 
