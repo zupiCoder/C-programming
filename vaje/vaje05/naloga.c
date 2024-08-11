@@ -1,64 +1,58 @@
-
-//vrednost pointer int vrednost = *pointer
-//naslov v pomnilniku int naslov = &pointer
-//tip pointerja doloca kaj je shranjeno v pointerju
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "naloga.h"
 
-int t[10];
+int vsota(int *zac, int *kon)
+{
+  int vsota = 0;
+  for (int *i = zac; i <= kon; i++)
+  {
+    vsota += *i;
+  }
 
-int vsota(int* zac, int* kon) {
-    int vsota = 0;
-
-    for(int* i = zac; i <= kon; i++) {
-        vsota += *i;
-    }
-    return vsota;
+  return vsota;
 }
 
-void indeksInKazalec(int* t, int* indeks, int** kazalec) {
-    //spremenljivka pointerja indeks ima vrednost - 1
-    if(*indeks == -1) { 
-        *indeks = *kazalec - t; //nastavi pointer na indeks el
-    } else {
-        int* el = &t[*indeks]; //pointer na element na indeksu
-        *kazalec = el; //pointer na pointer na element na indeksu
-    }
+void indeksInKazalec(int *t, int *indeks, int **kazalec)
+{ 
+  if (*indeks == -1)
+  { 
+    *indeks = *kazalec - t;
+  }
+  else
+  {
+    int *el = &t[*indeks];
+    *kazalec = el;
+  }
 }
 
-void frekvenceCrk(char* niz, int** frekvence) {
-    int* crke = calloc(26, sizeof(int));
-    char* p = niz;
-
-    while(*p != '\0'){ //nakljucni znak
-        if((*p >= 'A' && *p <= 'Z') || (*p >= 'a' && *p <= 'z')){
-            int indeks = (*p >= 'a') ? (*p - 'a') : (*p - 'A');
-            crke[indeks]++;
-        }
-        p++;
+void frekvenceCrk(char *niz, int **frekvence)
+{ 
+  // kazalec kaze na zacetek novo ustvarjene tabele
+  int *crke = calloc(26, sizeof(int)); //kaj je razlika med malloc in calloc
+  //calloc allocata memory block in vrednosti nastavi v 0, malloc samo allocata memory block 
+  char *p = niz;
+  // beremo dokler ne pride do dolocenega elementa
+  while (*p != '\0')
+  {
+    if ((*p >= 'A' && *p <= 'Z') || (*p >= 'a' && *p <= 'z'))
+    {
+      int indeks = (*p >= 'a') ? (*p - 'a') : (*p - 'A');
+      crke[indeks]++;
     }
-    *frekvence = crke;
-
+    // incrementamo po nizu
+    p++;
+  }
+  // vpisemo kazalec na zacetek novoustvarjene tabele frekvence
+  *frekvence = crke;
 }
 
 #ifndef test
+  
+int main()
+{
 
-int main() {
-
-    int* zac = &t[0];
-    int* kon = &t[10];
-
-    t[0] = 2;
-    t[6] = -2;
-    t[9] = -2;
-    t[10] = 2;
-
-    int sum = vsota(zac, kon);
-    
-    printf("%d\n", sum);
-    return 0;
 }
 
 #endif
