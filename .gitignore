@@ -1,12 +1,13 @@
-# Ignore test files and compiled binaries
-*.test.*
-Makefile
-.vscode/
-*.in
-*.out
-*.res
-*.exe
-*.so
-*.a
-*.dll
-core
+# Ignore specific file types throughout the repository
+**/test*.in
+**/test*.out
+**/test*.res
+**/test*.diff
+
+# Ignore Makefiles throughout the repository
+**/Makefile
+
+# Ignore compiled C files
+**/*.o
+**/*.exe
+**/*.out
