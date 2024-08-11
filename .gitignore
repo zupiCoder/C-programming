@@ -1,0 +1,12 @@
+# Ignore test files and compiled binaries
+*.test.*
+Makefile
+.vscode/
+*.in
+*.out
+*.res
+*.exe
+*.so
+*.a
+*.dll
+core
